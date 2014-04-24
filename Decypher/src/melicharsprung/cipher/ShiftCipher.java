@@ -1,5 +1,10 @@
 package melicharsprung.cipher;
 
+/**
+ * 
+ * @author Lukas Sprung
+ *
+ */
 public class ShiftCipher extends MonoalphabeticCipher{
 
 	public ShiftCipher(int value) {

@@ -1,5 +1,10 @@
 package melicharsprung.cipher;
 
+/**
+ * 
+ * @author Lukas Sprung
+ *
+ */
 public class KeywordCipher extends MonoalphabeticCipher {
 
 	public KeywordCipher(String keyword) {

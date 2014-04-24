@@ -4,7 +4,7 @@ package melicharsprung.cipher;
  * Transposition Cipher
  * 
  * @author Daniel Melichar
- * @version 23-04-2014
+ * @version 24-04-2014
  *
  */
 public class TranspositionCipher implements Cipher {
@@ -17,6 +17,14 @@ public class TranspositionCipher implements Cipher {
 	
 	public void setTranspositionLevel(int level) {
 		this.transpositionLevel = level;
+	}
+	
+	private boolean checkOutput(String cipherText, String plainText) {
+		String check = decrypt(cipherText);
+		
+		if(check.equals(plainText))
+			return true;
+		return false;
 	}
 	
 	private String processInput(String text) {
@@ -52,7 +60,10 @@ public class TranspositionCipher implements Cipher {
 			}
 		}
 		
-		return cipherText;
+		if(checkOutput(cipherText, plainText))
+			return cipherText;
+		else new IllegalArgumentException("Etwas ist falsch gelaufen!");
+		return null;
 	}
 
 	@Override
@@ -79,7 +90,10 @@ public class TranspositionCipher implements Cipher {
 				plainText+=mat[j][i];
 			}
 		}
-  
-		return plainText;
+		
+		if(checkOutput(cipherText, plainText))
+			return plainText;
+		else new IllegalArgumentException("Etwas ist falsch gelaufen!");
+		return null;
 	}
 }

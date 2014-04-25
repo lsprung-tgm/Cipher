@@ -3,6 +3,7 @@ package melicharsprung.gui;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+@SuppressWarnings("serial")
 public class InterfaceCipherView extends JFrame {
 
 	private InterfaceCipherControl c;

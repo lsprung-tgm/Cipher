@@ -31,7 +31,7 @@ public class TranspositionCipher implements Cipher {
 		
 		int r = transpositionLevel;
 		int length = text.length();
-		int c=length/transpositionLevel;
+		int c=length/transpositionLevel+1;
 		char mat[][] = new char[r][c];
 		int k=0;
 		   
@@ -61,7 +61,7 @@ public class TranspositionCipher implements Cipher {
 		
 		int r = transpositionLevel;
 		int length = text.length();
-		int c=length/transpositionLevel;
+		int c=length/transpositionLevel+1;
 		char mat[][]=new char[r][c];
 		int k=0;
 		   

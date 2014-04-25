@@ -10,6 +10,6 @@ public class InterfaceCipherModel {
 	private TranspositionCipher tc;
 	
 	public InterfaceCipherModel() {
-		
+			
 	}
 }

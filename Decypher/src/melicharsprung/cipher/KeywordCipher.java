@@ -17,7 +17,16 @@ public class KeywordCipher extends MonoalphabeticCipher {
 	 * @param keyword
 	 */
 	public void setKeyword(String keyword) {
-		codewordal = keyword.toLowerCase();
+		String word = "";
+		word+=keyword.charAt(0);
+		for(int i = 1; i < keyword.length(); i++){
+			if(word.contains(keyword.charAt(i)+"")){
+				//do nothing
+			}else{
+				word+=keyword.charAt(i);
+			}
+		}
+		codewordal = word.toLowerCase();
 		for(char i = 97; i < 122; i++){
 			if(codewordal.contains(i+"")); else {
 				codewordal+=i;

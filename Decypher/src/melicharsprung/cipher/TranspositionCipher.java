@@ -12,7 +12,7 @@ public class TranspositionCipher implements Cipher {
 	private int transpositionLevel;
 	
 	public TranspositionCipher() {
-		this.transpositionLevel = 5;
+		this.transpositionLevel = 6;
 	}
 	
 	public void setTranspositionLevel(int level) {
@@ -61,7 +61,7 @@ public class TranspositionCipher implements Cipher {
 		
 		int r = transpositionLevel;
 		int length = text.length();
-		int c=length/transpositionLevel+1;
+		int c=length/transpositionLevel;
 		char mat[][]=new char[r][c];
 		int k=0;
 		   

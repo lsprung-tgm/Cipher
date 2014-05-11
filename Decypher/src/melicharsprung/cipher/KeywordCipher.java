@@ -33,4 +33,7 @@ public class KeywordCipher extends MonoalphabeticCipher {
 			}
 		}
 	}
+	public String getKeyword() {
+		return codewordal;
+	}
 }

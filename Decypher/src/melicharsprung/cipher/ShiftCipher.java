@@ -1,7 +1,7 @@
 package melicharsprung.cipher;
 
 public class ShiftCipher extends MonoalphabeticCipher{
-
+	String geheimalphabet;
 	public ShiftCipher(int value) {
 		super();
 		setShiftAmmount(value);
@@ -15,7 +15,7 @@ public class ShiftCipher extends MonoalphabeticCipher{
 	 */
 	public void  setShiftAmmount(int shiftvalue) {
 		char[] normalphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
-		String geheimalphabet = "";
+		geheimalphabet = "";
 		for(int i = 0; i < normalphabet.length; i++) {
 			char stellez = 'a';
 			for(int j = 1; 1 <= shiftvalue; j++) {
@@ -24,5 +24,8 @@ public class ShiftCipher extends MonoalphabeticCipher{
 			}
 			geheimalphabet+=stellez;
 		}
+	}
+	public String getShiftAl() {
+		return geheimalphabet;
 	}
 }
